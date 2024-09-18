@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@600&display=swap");
+
+.outfit-thin {
+    font-weight: 300;
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.outfit-regular {
+    font-weight: 400;
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+}
+
+.outfit-bold {
+    font-weight: 600;
+    font-family: "Outfit", sans-serif;
+    font-style: normal;
+    font-optical-sizing: auto;
+}

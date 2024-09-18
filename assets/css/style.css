@@ -1,0 +1,155 @@
+@import url(_font.css);
+@import url(_reset.css);
+
+:root {
+    /* fonts */
+    --fw-thin: 300;
+    --fw-regular: 400;
+    --fw-bold: 600;
+
+    /* fonts sizes */
+    /* Step -2: 12.5px → 12.8px */
+    --fs-step--2: clamp(0.7813rem, 0.7747rem + 0.0326vw, 0.8rem);
+    /* Step -1: 15px → 16px */
+    --fs-step--1: clamp(0.9375rem, 0.9158rem + 0.1087vw, 1rem);
+    /* Step 0: 18px → 20px */
+    --fs-step-0: clamp(1.125rem, 1.0815rem + 0.2174vw, 1.25rem);
+    /* Step 1: 21.6px → 25px */
+    --fs-step-1: clamp(1.35rem, 1.2761rem + 0.3696vw, 1.5625rem);
+    /* Step 2: 25.92px → 31.25px */
+    --fs-step-2: clamp(1.62rem, 1.5041rem + 0.5793vw, 1.9531rem);
+    /* Step 3: 31.104px → 39.0625px */
+    --fs-step-3: clamp(1.944rem, 1.771rem + 0.8651vw, 2.4414rem);
+    /* Step 4: 37.3248px → 48.8281px */
+    --fs-step-4: clamp(2.3328rem, 2.0827rem + 1.2504vw, 3.0518rem);
+    /* Step 5: 44.7898px → 61.0352px */
+    --fs-step-5: clamp(2.7994rem, 2.4462rem + 1.7658vw, 3.8147rem);
+
+    /* colors */
+    /* ### Primary */
+    --clr-primary-soft-blue: hsl(215, 51%, 70%);
+    --clr-primary-cyan: hsl(178, 100%, 50%);
+
+    /* ### Neutral */
+    --clr-neutral-very-dark-blue-main-BG: hsl(217, 54%, 11%);
+    --clr-neutral-very-dark-blue-card-BG: hsl(216, 50%, 16%);
+    --clr-neutral-very-dark-blue-line: hsl(215, 32%, 27%);
+    --clr-neutral-white: hsl(0, 0%, 100%);
+}
+
+body {
+    display: grid;
+
+    font-weight: var(--fw-regular);
+    font-size: var(--fs-step-0);
+    font-family: "Outfit", sans-serif;
+
+    background: var(--clr-neutral-very-dark-blue-main-BG);
+
+    place-items: center;
+}
+
+.card {
+    display: grid;
+    gap: 1.5em;
+    width: clamp(30ch, 30vw, 32ch);
+    padding: 1.5em;
+
+    color: var(--clr-primary-soft-blue);
+
+    background-color: var(--clr-neutral-very-dark-blue-card-BG);
+    border-radius: 2rem;
+
+    & * {
+        margin: 0;
+    }
+
+    .card__mainImg {
+        position: relative;
+
+        border-radius: .5em;
+        cursor: pointer;
+
+        img {
+            border-radius: inherit;
+        }
+
+        &::after {
+            position: absolute;
+
+            display: grid;
+
+            background-color: hsl(from var(--clr-primary-cyan) h s l / .5);
+            border-radius: inherit;
+            opacity: 0;
+
+            content: url(../images/icon-view.svg);
+            place-items: center;
+            inset: 0;
+        }
+
+        &:hover,
+        &:focus {
+            &::after{
+                opacity: 1;
+            }
+        }
+    }
+
+    h1 {
+        color: var(--clr-neutral-white);
+        font-size: var(--fs-step-1);
+
+        cursor: pointer;
+
+        &:hover,
+        &:focus {
+            color: var(--clr-primary-cyan);
+        }
+    }
+
+    .card__info {
+        display: flex;
+        gap: 0.5em;
+
+        & * {
+            margin: 0;
+        }
+
+        img {
+            object-fit: contain;
+        }
+
+        .card__price {
+            margin-right: auto;
+
+            color: var(--clr-primary-cyan);
+        }
+    }
+
+    .card__author {
+        display: flex;
+        gap: 1em;
+
+        border-top: 1px solid var(--clr-primary-soft-blue);
+        padding-block-start: 1em;
+
+        .card__avatar {
+            width: 10%;
+
+            border: 1px solid var(--clr-neutral-white);
+            border-radius: 50%;
+        }
+
+        .card__authorName {
+            color: var(--clr-neutral-white);
+
+            cursor: pointer;
+
+            &:hover,
+            &:focus {
+                color: var(--clr-primary-cyan);
+            }
+        }
+    }
+}
