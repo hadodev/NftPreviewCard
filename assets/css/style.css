@@ -78,6 +78,7 @@ body {
             position: absolute;
 
             display: grid;
+            width: 100%;
 
             background-color: hsl(from var(--clr-primary-cyan) h s l / .5);
             border-radius: inherit;

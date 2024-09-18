@@ -43,7 +43,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github repository solution URL here](https://github.com/hadodev/NftPreviewCard)
-- Live Site URL: [Live site URL here](https://hadodev.github.io/NftPreviewCard)
+- Live Site URL: [Live site URL here](https://hadodev-frontendmentor-nftpreviewcard.netlify.app/)
 
 ## My process
 
