@@ -30,13 +30,9 @@ Users should be able to:
 
 #### Desktop
 
-##### The rating card
-
 ![](./design/desktop-design.png)
 
 #### Mobile
-
-##### The rating card
 
 ![](./design/mobile-design.png)
 
