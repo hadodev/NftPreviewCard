@@ -50,9 +50,10 @@ body {
 }
 
 .card {
+    --width: clamp(30ch, 30vw, 32ch);
     display: grid;
     gap: 1.5em;
-    width: clamp(30ch, 30vw, 32ch);
+    width: var(--width);
     padding: 1.5em;
 
     color: var(--clr-primary-soft-blue);
@@ -71,6 +72,8 @@ body {
         cursor: pointer;
 
         img {
+            width: var(--width);
+            
             border-radius: inherit;
         }
 
